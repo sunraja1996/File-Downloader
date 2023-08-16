@@ -15,7 +15,7 @@ function App() {
       const tempUrl = URL.createObjectURL(file);
       const aTag = document.createElement('a');
       aTag.href = tempUrl;
-      aTag.download = url.replace(/^.*[\\\/]/, '').replace(/\.\w+$/, '.jpg');
+      aTag.download = url.replace(/^.*[/]/, '').replace(/.\w+$/, '.jpg');
       document.body.appendChild(aTag);
       aTag.click();
       setDownloadBtnText('Download File');
